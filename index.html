@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebFeed — Discover the Web</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYnViYmxlIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzhiNWNmNiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzYjZjZmYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InRodW1iIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzdjNWNmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyYjdiZmYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8cGF0aCBkPSJNMjggOCBIMTAwIEEyMCAyMCAwIDAgMSAxMjAgMjggVjgwIEEyMCAyMCAwIDAgMSAxMDAgMTAwIEg3NCBMNjQgMTE4IEw1NCAxMDAgSDI4CiAgICAgICAgICAgQTIwIDIwIDAgMCAxIDggODAgVjI4IEEyMCAyMCAwIDAgMSAyOCA4IFoiIGZpbGw9InVybCgjYnViYmxlKSIvPgoKICA8cmVjdCB4PSIyMCIgeT0iMjAiIHdpZHRoPSI4OCIgaGVpZ2h0PSI2OCIgcng9IjgiIGZpbGw9IiNmZmYiLz4KICA8bGluZSB4MT0iMjAiIHkxPSIzOCIgeDI9IjEwOCIgeTI9IjM4IiBzdHJva2U9IiNlNGU0ZWMiIHN0cm9rZS13aWR0aD0iMiIvPgoKICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjI5IiByPSI0LjUiIGZpbGw9IiNmZjVmNTciLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjI5IiByPSI0LjUiIGZpbGw9IiNmZWJjMmUiLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjI5IiByPSI0LjUiIGZpbGw9IiMyOGM4NDAiLz4KCiAgPHJlY3QgeD0iNzgiIHk9IjI1IiB3aWR0aD0iMjYiIGhlaWdodD0iNyIgcng9IjMuNSIgZmlsbD0iI2RjZGNlYSIvPgoKICA8cmVjdCB4PSIyOCIgeT0iNDgiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMiIgcng9IjYiIGZpbGw9InVybCgjdGh1bWIpIi8+CgogIDxyZWN0IHg9IjY0IiB5PSI1MCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjYiIHJ4PSIzIiBmaWxsPSIjZDRkNGUyIi8+CiAgPHJlY3QgeD0iNjQiIHk9IjYxIiB3aWR0aD0iMjYiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9IiNkNGQ0ZTIiLz4KICA8cmVjdCB4PSI2NCIgeT0iNzIiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0iI2Q0ZDRlMiIvPgoKICA8Y2lyY2xlIGN4PSI5OCIgY3k9Ijg4IiByPSIyMCIgZmlsbD0iI2ZmZiIvPgogIDxwYXRoIGQ9Ik05OCA5OCBDODggOTAgODIgODUgODIgNzguNSBDODIgNzMuNSA4NiA3MCA5MC41IDcwIEM5My41IDcwIDk2IDcxLjUgOTggNzQKICAgICAgICAgICBDMTAwIDcxLjUgMTAyLjUgNzAgMTA1LjUgNzAgQzExMCA3MCAxMTQgNzMuNSAxMTQgNzguNSBDMTE0IDg1IDEwOCA5MCA5OCA5OCBaIgogICAgICAgIGZpbGw9IiNmZjRkNmQiLz4KPC9zdmc+Cg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- ============ AUTH GATE ============ -->
+<div id="authGate" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;">
+  <div class="glass" style="width:100%;max-width:380px;border-radius:24px;padding:32px 28px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+      <svg viewBox="0 0 48 48" fill="none" style="width:32px;height:32px;">
+        <rect x="6" y="10" width="36" height="24" rx="6" fill="#fff" fill-opacity="0.95"/>
+        <rect x="6" y="10" width="36" height="8" rx="6" fill="#fff"/>
+        <circle cx="12.5" cy="14" r="1.7" fill="#ff5c7c"/>
+        <circle cx="18" cy="14" r="1.7" fill="#ffb648"/>
+        <circle cx="23.5" cy="14" r="1.7" fill="#2fe6c8"/>
+        <rect x="12" y="22" width="10" height="8" rx="2" fill="#7c5cff"/>
+        <rect x="25" y="22.5" width="13" height="2" rx="1" fill="#c9c9e8"/>
+        <rect x="25" y="27" width="9" height="2" rx="1" fill="#c9c9e8"/>
+        <circle cx="35" cy="31" r="7" fill="#fff"/>
+        <path d="M35 34.6c-2.6-1.7-4.3-3.1-4.3-4.9 0-1.3 1-2.2 2.2-2.2.9 0 1.5.5 2.1 1.2.6-.7 1.2-1.2 2.1-1.2 1.2 0 2.2.9 2.2 2.2 0 1.8-1.7 3.2-4.3 4.9z" fill="#ff3b6b"/>
+      </svg>
+      <span style="font-family:'Sora',sans-serif;font-size:19px;font-weight:700;">WebFeed</span>
+    </div>
+    <h3 id="authTitle" style="font-size:20px;margin:14px 0 4px;">Welcome back</h3>
+    <p id="authSubtitle" style="color:var(--text-dim);font-size:13.5px;margin-bottom:20px;">Sign in to publish, like, and comment.</p>
+
+    <div id="authError" style="display:none;background:#ff5c7c22;border:1px solid #ff5c7c55;color:#ff5c7c;font-size:13px;padding:10px 12px;border-radius:10px;margin-bottom:14px;"></div>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+      <div class="field">
+        <label>Email</label>
+        <div class="input-icon-wrap">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <input type="email" id="authEmail" name="username" placeholder="you@example.com" required autocomplete="username">
+        </div>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <div class="input-icon-wrap">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="10.5" width="16" height="10" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M7.5 10.5V7.5a4.5 4.5 0 019 0v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          <input type="password" id="authPassword" name="password" class="has-toggle" placeholder="••••••••" required minlength="6" autocomplete="current-password">
+          <button type="button" class="pw-toggle" id="pwToggleBtn" onclick="togglePasswordVisibility()" aria-label="Show password">
+            <svg id="pwEyeIcon" viewBox="0 0 24 24" fill="none"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/></svg>
+          </button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" id="authSubmitBtn" style="width:100%;justify-content:center;margin-top:4px;">
+        <span id="authSubmitLabel">Sign in</span>
+      </button>
+    </form>
+
+    <div style="text-align:center;margin-top:18px;font-size:13px;color:var(--text-faint);">
+      <span id="authToggleText">Don't have an account?</span>
+      <button onclick="toggleAuthMode()" style="color:#fff;font-weight:600;text-decoration:underline;">
+        <span id="authToggleLink">Sign up</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BAN GATE ============ -->
+<div id="banGate" style="display:none;min-height:100vh;align-items:center;justify-content:center;padding:24px;flex-direction:column;text-align:center;">
+  <svg viewBox="0 0 24 24" fill="none" style="width:64px;height:64px;color:#ff5c5c;margin-bottom:18px;">
+    <circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M5.5 5.5l13 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+  <h2 style="font-family:'Sora',sans-serif;font-size:20px;margin-bottom:8px;">Account suspended</h2>
+  <p style="color:var(--text-dim);font-size:14px;max-width:340px;line-height:1.5;margin-bottom:6px;">Your account has been banned by a moderator for violating community guidelines.</p>
+  <p id="banReasonText" style="color:#ff8a8a;font-size:13.5px;max-width:340px;font-weight:600;margin-bottom:22px;"></p>
+  <button class="btn btn-ghost" onclick="handleSignOut()">Sign out</button>
+</div>
+
+<div id="appRoot" style="display:none;">
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 48 48" fill="none">
+        <rect x="6" y="10" width="36" height="24" rx="6" fill="#fff" fill-opacity="0.95"/>
+        <rect x="6" y="10" width="36" height="8" rx="6" fill="#fff"/>
+        <circle cx="12.5" cy="14" r="1.7" fill="#ff5c7c"/>
+        <circle cx="18" cy="14" r="1.7" fill="#ffb648"/>
+        <circle cx="23.5" cy="14" r="1.7" fill="#2fe6c8"/>
+        <rect x="12" y="22" width="10" height="8" rx="2" fill="#7c5cff"/>
+        <rect x="25" y="22.5" width="13" height="2" rx="1" fill="#c9c9e8"/>
+        <rect x="25" y="27" width="9" height="2" rx="1" fill="#c9c9e8"/>
+        <circle cx="35" cy="31" r="7" fill="#fff"/>
+        <path d="M35 34.6c-2.6-1.7-4.3-3.1-4.3-4.9 0-1.3 1-2.2 2.2-2.2.9 0 1.5.5 2.1 1.2.6-.7 1.2-1.2 2.1-1.2 1.2 0 2.2.9 2.2 2.2 0 1.8-1.7 3.2-4.3 4.9z" fill="#ff3b6b"/>
+      </svg>
+    </div>
+    WebFeed
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn-primary" onclick="openPublish()">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Publish
+    </button>
+    <button class="icon-btn" id="topbarNotifBtn" title="Notifications" onclick="openNotifications()" style="position:relative;">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 8a6 6 0 1112 0c0 4 1.5 5.5 2 6H4c.5-.5 2-2 2-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 19a2.5 2.5 0 005 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span id="notifBadge" style="display:none;position:absolute;top:5px;right:5px;width:9px;height:9px;border-radius:50%;background:#ff5c7c;border:2px solid var(--bg);"></span>
+    </button>
+    <button class="icon-btn" id="topbarProfileBtn" title="Profile" onclick="openProfile()">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 20c1.6-3.6 4.6-5.5 7.5-5.5s5.9 1.9 7.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow"><span class="dot"></span>Live feed · <b><span id="siteCount">0</span> sites</b></div>
+    <h1>Discover the web's <span>best-kept builds.</span></h1>
+    <p>A feed of independently published web apps and web games — launch, browse, and react in one place.</p>
+  </div>
+
+  <!-- ============ CONTROLS ============ -->
+  <div class="controls">
+    <div class="search-box glass">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search websites, titles, descriptions..." oninput="renderFeed()">
+    </div>
+    <div class="select-wrap">
+      <select id="genreFilter" class="glass" onchange="renderFeed()">
+        <option value="all">All genres</option>
+        <option value="webapp">Web App</option>
+        <option value="webgame">Web Game</option>
+      </select>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    <div class="select-wrap">
+      <select id="sortBy" class="glass" onchange="renderFeed()">
+        <option value="newest">Newest</option>
+        <option value="liked">Most Liked</option>
+        <option value="popular">Most Popular</option>
+      </select>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+
+  <!-- ============ RECOMMENDED ============ -->
+  <div class="rec-section" id="recSection">
+    <div class="rec-head">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2-5.5-3.3-5.5 3.3 1.4-6.2-4.7-4.2 6.2-.6L12 2.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <h2>Recommended for you</h2>
+    </div>
+    <div class="rec-rail" id="recRail"></div>
+  </div>
+
+  <!-- ============ FEED ============ -->
+  <div class="feed" id="feed"></div>
+</div>
+
+<!-- ============ PUBLISH FAB ============ -->
+<button class="fab" onclick="openPublish()">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <span>Publish</span>
+</button>
+</div><!-- /appRoot -->
+
+<!-- ============ INFO MODAL ============ -->
+<div class="modal-overlay fullscreen" id="infoOverlay" onclick="closeOnOverlay(event,'infoOverlay')">
+  <div class="modal fullscreen" style="max-width:none;">
+    <button class="fs-close" onclick="closeModal('infoOverlay')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body no-pad" id="infoContent"></div>
+  </div>
+</div>
+
+<!-- ============ PUBLISH MODAL ============ -->
+<div class="modal-overlay fullscreen" id="publishOverlay" onclick="closeOnOverlay(event,'publishOverlay')">
+  <div class="modal fullscreen" style="max-width:none;">
+    <button class="fs-close" onclick="closeModal('publishOverlay')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body" style="max-width:560px;margin:0 auto;padding:70px 24px 60px;max-height:none;overflow-y:visible;">
+      <h3 id="publishModalTitle" style="font-size:22px;margin-bottom:22px;">Publish a website</h3>
+      <form id="publishForm" onsubmit="handlePublish(event)">
+        <div class="field">
+          <label>Website title</label>
+          <input type="text" id="pTitle" placeholder="e.g. Nebula — ambient focus timer" required>
+        </div>
+        <div class="field">
+          <label>Website URL</label>
+          <input type="url" id="pUrl" placeholder="https://yourproject.com" required oninput="validateUrlField()" onblur="validateUrlField()">
+          <div class="field-error" id="urlError">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span id="urlErrorText">That doesn't look like a real website URL.</span>
+          </div>
+          <div class="field-valid" id="urlValid">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Looks like a valid URL</span>
+          </div>
+          <div class="field-warn" id="urlWarn">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 16.5h.01M10.3 3.9L2.5 17.5a1.6 1.6 0 001.4 2.4h16.2a1.6 1.6 0 001.4-2.4L13.7 3.9a1.6 1.6 0 00-2.8 0z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            <span id="urlWarnText">This URL has traits associated with unsafe sites.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Upload image (optional)</label>
+          <div class="upload-box" id="uploadBox">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4M12 4l-4 4M12 4l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span>Click or drag an image here</span>
+            <input type="file" accept="image/*" id="pImage" onchange="handleImagePreview(event)">
+          </div>
+          <img class="upload-preview" id="uploadPreview">
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <textarea id="pDesc" placeholder="What does your website do?" required></textarea>
+        </div>
+        <div class="field">
+          <label>Genre</label>
+          <div class="genre-select">
+            <div class="genre-opt active" data-genre="webapp" onclick="selectGenre('webapp')">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 8.5h18" stroke="currentColor" stroke-width="1.8"/><rect x="8.5" y="11.5" width="7" height="6" rx="1.6" stroke="currentColor" stroke-width="1.8"/></svg>
+              <span>Web App</span>
+            </div>
+            <div class="genre-opt" data-genre="webgame" onclick="selectGenre('webgame')">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6.8 8.2h10.4c2.1 0 3.9 1.6 4.2 3.7l.7 4.8a2.3 2.3 0 01-3.9 1.9l-2.1-2.1H9.9l-2.1 2.1a2.3 2.3 0 01-3.9-1.9l.7-4.8c.3-2.1 2.1-3.7 4.2-3.7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.4 11v3.2M6.8 12.6H10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="15.6" cy="11.3" r="1" fill="currentColor"/><circle cx="17.6" cy="13.3" r="1" fill="currentColor"/></svg>
+              <span>Web Game</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="publishSubmitBtn" style="width:100%;justify-content:center;margin-top:6px;">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span id="publishSubmitLabel">Publish website</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NOTIFICATIONS MODAL ============ -->
+<div class="modal-overlay fullscreen" id="notifOverlay" onclick="closeOnOverlay(event,'notifOverlay')">
+  <div class="modal fullscreen" style="max-width:none;">
+    <button class="fs-close" onclick="closeModal('notifOverlay')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body" style="max-width:560px;margin:0 auto;padding:70px 24px 60px;max-height:none;overflow-y:visible;">
+      <h3 style="font-size:22px;margin-bottom:22px;">Notifications</h3>
+      <div id="notifBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ REPORT MODAL ============ -->
+<div class="modal-overlay" id="reportOverlay" onclick="closeOnOverlay(event,'reportOverlay')">
+  <div class="modal" style="max-width:380px;">
+    <div class="modal-head">
+      <h3>Report website</h3>
+      <button class="modal-close" onclick="closeModal('reportOverlay')">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="reportForm" onsubmit="submitReport(event)">
+        <div class="field">
+          <label>Why are you reporting this?</label>
+          <div style="display:flex;flex-direction:column;gap:8px;" id="reportReasonList">
+            <label class="report-reason-opt">
+              <input type="radio" name="reportReason" value="spam" checked>
+              <span>Spam</span>
+            </label>
+            <label class="report-reason-opt">
+              <input type="radio" name="reportReason" value="broken">
+              <span>Broken link</span>
+            </label>
+            <label class="report-reason-opt">
+              <input type="radio" name="reportReason" value="inappropriate">
+              <span>Inappropriate content</span>
+            </label>
+            <label class="report-reason-opt">
+              <input type="radio" name="reportReason" value="other">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Additional details (optional)</label>
+          <textarea id="reportDetails" placeholder="Anything else we should know?" maxlength="500"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="reportSubmitBtn" style="width:100%;justify-content:center;">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h11l-2.2 4L16 12H5V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>Submit report</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROFILE MODAL ============ -->
+<div class="modal-overlay fullscreen" id="profileOverlay" onclick="closeOnOverlay(event,'profileOverlay')">
+  <div class="modal fullscreen" style="max-width:none;">
+    <button class="fs-close" onclick="closeModal('profileOverlay')">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-body" style="max-width:560px;margin:0 auto;padding:70px 24px 60px;max-height:none;overflow-y:visible;">
+      <h3 style="font-size:22px;margin-bottom:22px;">Profile</h3>
+      <div id="profileBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WARNING MODAL ============ -->
+<div class="modal-overlay" id="warningOverlay">
+  <div class="modal" style="max-width:380px;">
+    <div class="modal-body" style="text-align:center;padding-top:24px;">
+      <svg viewBox="0 0 24 24" fill="none" style="width:48px;height:48px;color:#ff8a5c;margin-bottom:14px;">
+        <path d="M12 3.5L2.5 20h19L12 3.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M12 10v4.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+        <circle cx="12" cy="17" r="0.9" fill="currentColor"/>
+      </svg>
+      <h3 style="margin-bottom:6px;">Warning from a moderator</h3>
+      <p style="color:var(--text-dim);font-size:13.5px;margin-bottom:16px;">Your account received a warning from a moderator. Please review our community guidelines to avoid further action, including a possible ban.</p>
+      <div id="warningReasonList" style="text-align:left;display:flex;flex-direction:column;gap:8px;margin-bottom:18px;"></div>
+      <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="acknowledgeWarnings()">I understand</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span id="toastText">Done</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
